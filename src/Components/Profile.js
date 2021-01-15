@@ -1,7 +1,5 @@
 import React, { Component } from 'react'
 import {Card, Row, Container, Button} from 'react-bootstrap';
-import { ToastContainer, toast } from 'react-toastify';
-
 
 export default class Profile extends Component{
     constructor(props){
