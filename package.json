@@ -9,6 +9,7 @@
     "env-cmd": "^10.1.0",
     "react": "^17.0.1",
     "react-axiom": "^0.5.2",
+    "bootstrap": "^4.4.1",
     "react-bootstrap": "^1.0.0",
     "react-dom": "^17.0.1",
     "react-router-dom": "^5.2.0",
