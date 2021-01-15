@@ -43,7 +43,7 @@ export default class Signup extends Component{
         body: JSON.stringify({user: { email: this.state.email, password: this.state.password, password_confirmation: this.state.password_confirmation }})
       };
 
-      fetch('http://localhost:3100/' + 'users/signup', requestOptions)
+      fetch(process.env.REACT_APP_API_URL + 'users/signup', requestOptions)
       .then(response => response.json())
       .then(data => {
         if(data.status == 200){

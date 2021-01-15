@@ -42,7 +42,7 @@ export default class Login extends Component{
         body: JSON.stringify({user: { email: this.state.email, password: this.state.password }})
       };
 
-      fetch('http://localhost:3100/' + 'users/login', requestOptions)
+      fetch(process.env.REACT_APP_API_URL + 'users/login', requestOptions)
       .then(response => response.json())
       .then(data => {
         debugger

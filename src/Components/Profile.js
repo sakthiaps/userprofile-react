@@ -30,7 +30,7 @@ export default class Profile extends Component{
         headers: { 'Content-Type': 'application/json', 'token': localStorage.getItem('token') }
       };
 
-      fetch('http://localhost:3100/' + 'users/profile', requestOptions).
+      fetch(process.env.REACT_APP_API_URL + 'users/profile', requestOptions).
       then(response => response.json())
       .then(data => {
         if(data.status == 200){
@@ -73,7 +73,7 @@ export default class Profile extends Component{
         body: JSON.stringify({user: { first_name: this.state.first_name, last_name: this.state.last_name, mobile_number: this.state.mobile_number }})
       };
 
-      fetch('http://localhost:3100/' + 'users/update_profile', requestOptions)
+      fetch(process.env.REACT_APP_API_URL + 'users/update_profile', requestOptions)
       .then(response => response.json())
       .then(data => {
         if(data.status == 200){
