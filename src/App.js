@@ -6,6 +6,7 @@ import {NavMenu} from './NavMenu'
 import Login from './Components/Login';
 import Signup from './Components/Signup';
 import Profile from './Components/ProductionForm';
+import ProductionTable from './Components/ProductionTable';
 
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
             <Route exact path={["/login", "/"]} component={Login} />
             <Route exact path={["/signup"]} component={Signup} />
             <Route exact path={["/production_form"]} component={Profile} />
+            <Route exact path={["/productions"]} component={ProductionTable} />
             <Route />
           </Switch>
         </div>

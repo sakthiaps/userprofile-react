@@ -7,16 +7,16 @@ import Select from 'react-select'
 
 
 export default class Profile extends Component{
-    constructor(props){
+  constructor(props){
     super(props)
-      this.state = {
-        start_date: new Date(),
-        shift: "",
-        user: "",
-        production_count: 0,
-        defect_count: 0
-      }
+    this.state = {
+      start_date: new Date(),
+      shift: "",
+      user: "",
+      production_count: 0,
+      defect_count: 0
     }
+  }
 
     componentDidMount(){
       this.redirectLogin()
@@ -28,21 +28,6 @@ export default class Profile extends Component{
         localStorage.setItem('token', '')
         window.location.href = "/login"
       }
-    }
-
-    getUserProfile = () => {
-      const requestOptions = {
-        method: 'get',
-        headers: { 'Content-Type': 'application/json', 'token': localStorage.getItem('token') }
-      };
-
-      fetch(process.env.REACT_APP_API_URL + 'users/profile', requestOptions).
-      then(response => response.json())
-      .then(data => {
-        if(data.status == 200){
-          this.updateData(data.data)
-        }
-      })
     }
 
     handleUser = (event) => {
@@ -93,6 +78,8 @@ export default class Profile extends Component{
       .then(data => {
         if(data.status == 200){
           window.alert(data.message)
+          window.location.href = '/productions'
+          
         } else if(data.status == 401) {
           window.alert('Sorry, You dont have access. Please login again')
         } else {
