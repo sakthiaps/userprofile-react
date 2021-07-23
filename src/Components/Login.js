@@ -49,7 +49,7 @@ export default class Login extends Component{
         if(data.status == 200){
           localStorage.setItem("token", data.token)
 
-          window.location.href = "/profile"
+          window.location.href = "/production_form"
         } else {
           window.alert(data.error)
         }

@@ -17,8 +17,9 @@ export class NavMenu extends Component{
           <Nav className="mr-auto">
             { localStorage.getItem('token') &&
               <>
-                <Nav.Link as={NavLink} to="/profile">Profile</Nav.Link>
-                <Nav.Link as={NavLink} to="/logout" onClick={this.logout}>Logout</Nav.Link>
+                {/* <Nav.Link as={NavLink} to="/profile">Profile</Nav.Link> */}
+                <Nav.Link as={NavLink} to="/logout" onClick={this.logout} className='font-weight-class'>Logout</Nav.Link>
+                <Nav.Link as={NavLink} to="/production_form" className='font-weight-class'>Production Entry</Nav.Link>
               </>
             }
 

@@ -5,7 +5,7 @@ import { BrowserRouter, Route, Switch,Link as Link1 } from 'react-router-dom';
 import {NavMenu} from './NavMenu'
 import Login from './Components/Login';
 import Signup from './Components/Signup';
-import Profile from './Components/Profile';
+import Profile from './Components/ProductionForm';
 
 
 function App() {
@@ -17,7 +17,7 @@ function App() {
           <Switch>
             <Route exact path={["/login", "/"]} component={Login} />
             <Route exact path={["/signup"]} component={Signup} />
-            <Route exact path={["/profile"]} component={Profile} />
+            <Route exact path={["/production_form"]} component={Profile} />
             <Route />
           </Switch>
         </div>

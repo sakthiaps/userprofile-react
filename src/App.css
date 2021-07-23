@@ -38,5 +38,9 @@
 }
 
 .navbar-light .navbar-nav .nav-link.active {
-  color: red !important;
+  color: yellow !important;
 }
+
+.font-weight-class {
+  font-weight: 600;
+} 
